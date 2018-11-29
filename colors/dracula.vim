@@ -235,8 +235,10 @@ set background=dark
 
 " Required as some plugins will overwrite
 call s:h('Normal', s:fg, s:Background())
-call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
-call s:h('StatusLineNC', s:none, s:bglight)
+call s:h('StatusLine', s:purple, ['NONE', 236])
+call s:h('StatusLineNC', ['NONE', 243], ['NONE', 236])
+call s:h('StatusLineTerm', s:purple, ['NONE', 236])
+call s:h('StatusLineTermNC', ['NONE', 243], ['NONE', 236])
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
