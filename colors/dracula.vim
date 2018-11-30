@@ -217,7 +217,7 @@ call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
 call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
 call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
-call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
+call s:h('DraculaSearch', ['NONE', 236], s:purple)
 call s:h('DraculaBoundary', s:comment, s:bgdark)
 call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
 
@@ -225,6 +225,12 @@ call s:h('DraculaDiffAdd', s:bgdark, s:purple)
 call s:h('DraculaDiffChange', s:none, s:none)
 call s:h('DraculaDiffText', s:bg, s:orange)
 call s:h('DraculaDiffDelete', s:red, s:bgdark)
+
+
+call s:h('DraculaTabLine', ['NONE', 243], ['NONE', 236])
+call s:h('DraculaTabLineFill', ['NONE', 243], ['NONE', 236])
+call s:h('DraculaTabLineSel', ['NONE', 4], ['NONE', 236])
+call s:h('DraculaVertSplit', ['NONE', 243], s:none)
 
 " }}}2
 
@@ -266,11 +272,11 @@ hi! link PmenuThumb   DraculaSelection
 hi! link Question     DraculaFgBold
 hi! link Search       DraculaSearch
 hi! link SignColumn   DraculaComment
-hi! link TabLine      DraculaBoundary
-hi! link TabLineFill  DraculaBgDarker
-hi! link TabLineSel   Normal
+hi! link TabLine      DraculaTabLine
+hi! link TabLineFill  DraculaTabLineFill
+hi! link TabLineSel   DraculaTabLineSel
 hi! link Title        DraculaGreenBold
-hi! link VertSplit    DraculaBoundary
+hi! link VertSplit    DraculaVertSplit
 hi! link Visual       DraculaSelection
 hi! link VisualNOS    Visual
 hi! link WarningMsg   DraculaOrangeInverse
@@ -279,7 +285,7 @@ hi! link WarningMsg   DraculaOrangeInverse
 " Syntax: {{{
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
+call s:h('MatchParen', ['NONE', 0], s:pink, [s:attrs.bold])
 call s:h('Conceal', s:comment, s:bglight)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
