@@ -2,12 +2,14 @@
 
 > A dark theme for [Vim](http://www.vim.org/).
 
-![Screenshot](https://draculatheme.com/assets/img/screenshots/vim.png)
+![Screenshot](./screenshot.png)
+
+Screenshot taken with the [pangloss/vim-javascript](https://github.com/pangloss/vim-javascript)
+syntax plugin for javascript.
 
 ## Install
 
-All instructions can be found at
-[draculatheme.com/vim](https://draculatheme.com/vim).
+All instructions can be found at [draculatheme.com/vim](https://draculatheme.com/vim).
 
 ## Team
 
